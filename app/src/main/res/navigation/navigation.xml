@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/notesFragment">
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.amnah.rdb.ui.notes.NotesFragment"
+        tools:layout="@layout/fragment_notes"
+        android:label="Notes">
+
+        <action
+            android:id="@+id/action_notesFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        tools:layout="@layout/fragment_add_task"
+        android:name="com.amnah.rdb.ui.addTask.AddTaskFragment"
+        android:label="Add Task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_notesFragment"
+            app:destination="@id/notesFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/notesFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
