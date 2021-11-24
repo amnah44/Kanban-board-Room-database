@@ -1,22 +1,16 @@
-package com.amnah.rdb.ui.notes
+package com.amnah.rdb.ui.addTask
 
-import android.app.Activity
-import android.content.Context
-import android.view.View
 import androidx.lifecycle.*
-import androidx.navigation.Navigation
-import com.amnah.rdb.R
 import com.amnah.rdb.data.Note
 import com.amnah.rdb.data.repository.NotesRepository
+import com.amnah.rdb.ui.notes.INoteInterActionClickListener
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 import java.util.*
-import java.util.Observer
 
 class NotesViewModel : ViewModel(), INoteInterActionClickListener {
 

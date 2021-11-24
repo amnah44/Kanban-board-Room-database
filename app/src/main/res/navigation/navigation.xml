@@ -22,8 +22,6 @@
         <action
             android:id="@+id/action_addTaskFragment_to_notesFragment"
             app:destination="@id/notesFragment"
-            app:launchSingleTop="true"
-            app:popUpTo="@+id/notesFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpTo="@id/notesFragment" />
     </fragment>
 </navigation>

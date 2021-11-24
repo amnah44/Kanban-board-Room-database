@@ -7,13 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.R
 import com.amnah.rdb.databinding.FragmentAddTaskBinding
-import com.amnah.rdb.ui.notes.NotesViewModel
 
-class AddTaskFragment : Fragment(){
-
+class AddTaskFragment : Fragment(), View.OnClickListener {
     private lateinit var _binding: FragmentAddTaskBinding
     private val _viewModel: NotesViewModel by viewModels()
     override fun onCreateView(
@@ -30,26 +26,11 @@ class AddTaskFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
 
-        _binding.addTask.setOnClickListener {
-            findNavController(requireView()).popBackStack()
-            }
+        _binding.addTask.setOnClickListener(this)
+    }
 
-//        val itemsOfState = listOf("TO-DO", "In Progress", "Done")
-//        val spinnerStateAdapter =
-//            ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, itemsOfState)
-//
-//        _binding.spinnerState.apply {
-//            adapter = spinnerStateAdapter
-//            onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-//                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-//
-//                    viewm
-//                }
-//
-//                override fun onNothingSelected(p0: AdapterView<*>?) {
-//                }
-//
-//            }
-//        }
+    override fun onClick(p0: View?) {
+        _viewModel.addNote()
+        p0?.let { Navigation.findNavController(it).popBackStack() }
     }
 }

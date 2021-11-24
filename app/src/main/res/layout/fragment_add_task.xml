@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.amnah.rdb.ui.notes.NotesViewModel" />
+            type="com.amnah.rdb.ui.addTask.NotesViewModel" />
 
     </data>
 
@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp"
-            android:onClick="@{() -> viewModel.addNote()}"
             android:text="@string/add_note"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

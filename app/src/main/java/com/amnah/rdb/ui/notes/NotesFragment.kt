@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.library.baseAdapters.BR
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.amnah.rdb.R
-import com.amnah.rdb.data.Note
 import com.amnah.rdb.databinding.FragmentNotesBinding
+import com.amnah.rdb.ui.addTask.NotesViewModel
 
 class NotesFragment : Fragment(), View.OnClickListener {
-
     private lateinit var _binding: FragmentNotesBinding
     private val _viewModel: NotesViewModel by viewModels()
 

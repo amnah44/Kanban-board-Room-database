@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.amnah.rdb.ui.notes.NotesViewModel" />
+            type="com.amnah.rdb.ui.addTask.NotesViewModel" />
 
     </data>
 
