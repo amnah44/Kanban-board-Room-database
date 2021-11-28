@@ -11,11 +11,11 @@ import com.amnah.rdb.databinding.FragmentAddTaskBinding
 
 class AddTaskFragment : Fragment(), View.OnClickListener {
     private lateinit var _binding: FragmentAddTaskBinding
-    private val _viewModel: NotesViewModel by viewModels()
+    private val _viewModel: AddTaskViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAddTaskBinding.inflate(layoutInflater)
         _binding.viewModel = _viewModel
         _binding.lifecycleOwner = this
@@ -24,7 +24,6 @@ class AddTaskFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         _binding.addTask.setOnClickListener(this)
     }

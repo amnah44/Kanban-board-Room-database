@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.amnah.rdb.R
 import com.amnah.rdb.databinding.FragmentNotesBinding
-import com.amnah.rdb.ui.addTask.NotesViewModel
 
 class NotesFragment : Fragment(), View.OnClickListener {
     private lateinit var _binding: FragmentNotesBinding

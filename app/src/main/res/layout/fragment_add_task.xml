@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.amnah.rdb.ui.addTask.NotesViewModel" />
+            type="com.amnah.rdb.ui.addTask.AddTaskViewModel" />
 
     </data>
 
@@ -19,10 +19,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/filter_shape"
-            android:hint="Enter task name"
+            android:hint="Notes Title"
             android:padding="16dp"
             android:text="@={viewModel.newTaskName}"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,46 +33,31 @@
         <EditText
             android:id="@+id/taskDescription"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/filter_shape"
-            android:hint="Enter Description to tasks"
+            android:gravity="top"
+            android:hint="Enter Description to your notes.."
             android:padding="16dp"
             android:text="@={viewModel.newTaskDescription}"
+            app:layout_constraintBottom_toTopOf="@+id/addTask"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/taskName" />
 
-        <EditText
-            android:id="@+id/taskAssignedTo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/filter_shape"
-            android:hint="Assigned To "
-            android:padding="16dp"
-            android:text="@={viewModel.newTaskAssignedTo}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/taskDescription" />
-
         <Button
             android:id="@+id/addTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp"
             android:text="@string/add_note"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/taskAssignedTo"
-            app:layout_constraintVertical_bias="0.86" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,15 +6,15 @@ import io.reactivex.rxjava3.core.Completable
 
 class NotesRepository {
 
-    val dao = NoteDatabase.getInstanceWithoutContext().noteDao()
+    private val dao = NoteDatabase.getInstanceWithoutContext().noteDao()
 
-    fun insertNewNote(note: Note) : Completable{
+    suspend fun insertNewNote(note: Note){
         return dao.insertNotes(note)
     }
-    fun deleteNote(note: Note) : Completable{
+    suspend fun deleteNote(note: Note){
         return dao.deleteNotes(note)
     }
-    fun updateNote(note: Note): Completable{
+    suspend fun updateNote(note: Note){
         return dao.updateNotes(note)
     }
 
